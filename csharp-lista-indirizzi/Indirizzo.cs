@@ -15,12 +15,12 @@ namespace csharp_lista_indirizzi
         private string street;
         private string city;
         private string province;
-        private int zip;
+        private string zip;
 
         // STATI
 
         // COSTRUTTORE
-        public Indirizzo(string name, string surname, string street, string city, string province, int zip)
+        public Indirizzo(string name, string surname, string street, string city, string province, string zip)
         {
 
             if ((name == "") || (surname == "") || (street == ""))
@@ -62,7 +62,7 @@ namespace csharp_lista_indirizzi
             return this.province;
         }
 
-        public int GetZip()
+        public string GetZip()
         {
             return this.zip;
         }

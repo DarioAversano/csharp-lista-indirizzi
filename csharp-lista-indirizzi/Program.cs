@@ -24,27 +24,27 @@ try
             else
             {
 
-                int zip = int.Parse(informazioniSeparate[5]);
+                //int zip = int.Parse(informazioniSeparate[5]);
 
                 try
                 {
-                    Indirizzo indirizzoLetto = new Indirizzo(informazioniSeparate[0], informazioniSeparate[1], informazioniSeparate[2], informazioniSeparate[3], informazioniSeparate[4], zip);
+                    Indirizzo indirizzoLetto = new Indirizzo(informazioniSeparate[0], informazioniSeparate[1], informazioniSeparate[2], informazioniSeparate[3], informazioniSeparate[4], informazioniSeparate[5]);
                     listaIndirizzi.Add(indirizzoLetto);
                 }
-                catch (ArgumentException ex)
+                catch (Exception e)
                 {
                     Console.WriteLine("C'è stato un errore nella lettura dell'indirizzo in riga n° " + contatoreRigheLette);
-                    Console.WriteLine("L'errore è: " + ex.Message);
+                    Console.WriteLine("L'errore è: " + e.Message);
                 }
             }
         }
     }
 
 }
-catch (Exception e)
+catch (Exception ex)
 {
     Console.WriteLine("Qualcosa è andato storto...");
-    Console.WriteLine(e.Message);
+    Console.WriteLine(ex.Message);
 }
 
 
